@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple tool to estimate student mathematics performance from reading and writing scores.">
+    <title>StudentScore | Performance indicator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="{{ url_for('index') }}">
+                <span class="brand-mark" aria-hidden="true">S</span>
+                <span>Student<span class="brand-light">Score</span></span>
+            </a>
+            <a class="button button-outline nav-cta" href="{{ url_for('predict_datapoint') }}">Try the predictor <span aria-hidden="true">→</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-dot"></span> STUDENT PERFORMANCE INDICATOR</p>
+                <h1>A clearer picture of <span>student performance.</span></h1>
+                <p class="hero-description">Explore an estimated mathematics score using a few student details and their reading and writing results.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="{{ url_for('predict_datapoint') }}">Get a score estimate <span aria-hidden="true">→</span></a>
+                    <span class="microcopy">Simple. Fast. Informative.</span>
+                </div>
+                <div class="hero-proof">
+                    <span class="proof-mark" aria-hidden="true">✓</span>
+                    <span>Designed to support learning conversations</span>
+                </div>
+            </div>
+            <div class="hero-visual" aria-label="Illustration of a student score summary">
+                <div class="visual-topline">
+                    <span class="visual-label">SCORE OVERVIEW</span>
+                    <span class="status-pill"><span></span> READY</span>
+                </div>
+                <div class="visual-title">Performance snapshot</div>
+                <div class="score-card">
+                    <div class="score-card-label">ESTIMATED MATHS SCORE</div>
+                    <div class="score-placeholder">—<span> / 100</span></div>
+                    <div class="score-rule"><span></span></div>
+                    <p>Add student results to generate an estimate.</p>
+                </div>
+                <div class="visual-metrics">
+                    <div class="metric">
+                        <span class="metric-icon metric-blue" aria-hidden="true">R</span>
+                        <span><small>SUBJECT</small><strong>Reading</strong></span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-icon metric-green" aria-hidden="true">W</span>
+                        <span><small>SUBJECT</small><strong>Writing</strong></span>
+                    </div>
+                </div>
+                <div class="visual-footnote"><span aria-hidden="true">✦</span> A helpful starting point for reflection</div>
+                <span class="decorative-orbit orbit-one" aria-hidden="true"></span>
+                <span class="decorative-orbit orbit-two" aria-hidden="true"></span>
+            </div>
+        </section>
+
+        <section class="how-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">HOW IT WORKS</p>
+                    <h2>Three steps to an estimate</h2>
+                    <p>No complicated setup. Just the information needed to get started.</p>
+                </div>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span class="step-number">01</span>
+                        <h3>Add student details</h3>
+                        <p>Share a few background details and preparation information.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number">02</span>
+                        <h3>Enter recent scores</h3>
+                        <p>Provide reading and writing scores on a scale of 0 to 100.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number">03</span>
+                        <h3>View the estimate</h3>
+                        <p>Get a predicted maths score to support your next conversation.</p>
+                    </article>
+                </div>
+                <div class="bottom-cta">
+                    <div>
+                        <h2>Ready to explore a score?</h2>
+                        <p>Enter the details and get your estimate.</p>
+                    </div>
+                    <a class="button button-primary" href="{{ url_for('predict_datapoint') }}">Start a prediction <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>StudentScore</span>
+            <span>Student performance indicator</span>
+        </div>
+    </footer>
+</body>
+</html>
